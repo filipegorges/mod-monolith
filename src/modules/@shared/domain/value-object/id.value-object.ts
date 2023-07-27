@@ -3,13 +3,13 @@ import { v4 as uuid } from 'uuid';
 
 
 export default class Id implements ValueObject {
-    private readonly _id: string;
+    private _id: string;
 
     constructor(id?: string) {
         this._id = id || uuid();
     }
 
-    get value(): string {
+    get id(): string {
         return this._id;
     }
 }
